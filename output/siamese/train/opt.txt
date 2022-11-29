@@ -1,0 +1,39 @@
+------------ Options -------------
+abnormal_class: defect
+batchsize: 1
+beta1: 0.5
+dataroot: F://ganomaly/output/ganomaly/test/
+dataset: 
+device: cpu
+display: False
+display_id: 0
+display_port: 8097
+display_server: http://localhost
+droplast: True
+extralayers: 0
+gpu_ids: [0]
+isTrain: True
+isize: 512
+iter: 0
+load_weights: False
+lr: 0.0002
+manualseed: -1
+metric: roc
+model: siamese
+name: siamese/
+nc: 1
+ndf: 64
+ngf: 64
+ngpu: 0
+niter: 15
+nz: 100
+outf: ./output
+phase: test
+print_freq: 1
+proportion: 0.1
+resume: 
+save_image_freq: 1
+save_test_images: False
+w_con: 50
+workers: 8
+-------------- End ----------------
