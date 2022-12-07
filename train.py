@@ -31,7 +31,7 @@ def train():
 
     ##
     # TRAIN MODEL
-    model.aetrain()
+    model.train()
 
 if __name__ == '__main__':
     train()

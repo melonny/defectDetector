@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="haha" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="haha">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/S21xul/defectDetector" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/home/S21xul/defectDetector/output" />
+            <excludedPath path="/home/S21xul/defectDetector/ae_dataset" />
+            <excludedPath path="/home/S21xul/defectDetector/cls_dataset" />
+            <excludedPath path="/home/S21xul/defectDetector/netG_40.pth" />
+            <excludedPath path="/home/S21xul/defectDetector/netG_30.pth" />
+            <excludedPath path="/home/S21xul/defectDetector/netG_10.pth" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

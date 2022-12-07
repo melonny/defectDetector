@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 import random
 
 from torchvision.datasets import ImageFolder
-from torchvision.datasets.folder import make_dataset, find_classes, IMG_EXTENSIONS, default_loader
+# from torchvision.datasets.folder import make_dataset, find_classes, IMG_EXTENSIONS, default_loader
 from torchvision.transforms import transforms
 
 
@@ -52,7 +52,8 @@ def loadSiamesedata(opt):
     splits = ['train', 'test']
     # vgg11的输入尺寸: 224*224
     transform = transforms.Compose([transforms.Resize((opt.isize, opt.isize)),
-                                    transforms.ToTensor()])
+                                    transforms.ToTensor(),
+                                    transforms.Normalize((0.5,), (0.5,)), ])
     # folder_dataset = torchvision.datasets.ImageFolder(root=training_dir)
     dataset = {x: ImageFolder(os.path.join(opt.dataroot, x), transform) for x in splits}
     if(opt.model == 'aesiamese'):
@@ -78,7 +79,7 @@ class AEDataset(Dataset):
     def __getitem__(self, index):
         img_tuple = self.imageFolderDataset.imgs[index]
         img = Image.open(img_tuple[0])
-        img = img.convert("L")
+        # img = img.convert("L")
         label = img_tuple[1]
         if self.transform is not None:
             img = self.transform(img)  # 在这里做transform，把图像转为tensor等等

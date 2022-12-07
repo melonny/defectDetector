@@ -32,6 +32,7 @@ def test():
     ##
     # TRAIN MODEL
     model.aetest()
+    # model.aeGaussion()
 
 if __name__ == '__main__':
     test()

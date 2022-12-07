@@ -1,18 +1,21 @@
-### 模型组成  
+### intro  
+this project is for graduation  
+as performance of single method is bad for industrial defect detection, i'll combine od, ae, and extra conv together, let's try!  
+### model structure  
 object detection + auto encoder + siamese network
 
-### 数据集格式
+### dataset  
 #### OD 
-输入：customeDataset/OD/train/8    
-输出：./output/OD/train  
+input：customeDataset/OD/train/8    
+output：./output/OD/train  
 #### AE
-输入：  
-训练集：customeDataset/AE/train/0.normal  
-测试集：customeDataset/AE/test/0.normal  customeDataset/AE/test/1.abnormal   
-输出：./ouput/ganomaly/train
+input：  
+train：customeDataset/AE/train/0.normal  
+test：customeDataset/AE/test/0.normal  customeDataset/AE/test/1.abnormal   
+output：./ouput/ganomaly/train
 #### Siamese
-输入：customeDataset/siamese/train/0.normal  customeDataset/siamese/train/1.abnormal    
-输出：./output/siamese/train  
+input：customeDataset/siamese/train/0.normal  customeDataset/siamese/train/1.abnormal    
+output：./output/siamese/train  
 ### CLI
-训练：  
-测试：  
+train：python train.py --model aesiamese    
+test：python test.py --model aesiamese  
